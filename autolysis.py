@@ -17,7 +17,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 API_URL = "https://aiproxy.sanand.workers.dev/openai/v1/chat/completions"
-API_TOKEN = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDI5MzZAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.bdpiUFKynqFAWX-IPZ8DV3R944rJjyjm1KhDv8Ft7VY"
+AI_PROXY = "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDI5MzZAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.bdpiUFKynqFAWX-IPZ8DV3R944rJjyjm1KhDv8Ft7VY"
 
 def read_csv_file(filename):
     try:
@@ -62,7 +62,7 @@ def generate_visualizations(df, output_dir):
 
 def send_to_llm(messages):
     headers = {
-        "Authorization": f"Bearer {API_TOKEN}",
+        "Authorization": f"Bearer {AI_PROXY}",
         "Content-Type": "application/json",
     }
     try:
